@@ -20,7 +20,6 @@ void ALAGC_MainAttackActor::Deactivate()
 	// 
 	//All MainAttacks are DORMANT so we ForceNetUpdate when needed (here when we deactivate it).
 	ForceNetUpdate();
-	//test
 }
 
 void ALAGC_MainAttackActor::SetActive(bool IsActive, int32 Speed)

@@ -6,4 +6,4 @@ Just to precise : if the client has 100 ms and there is a 100ms delay between th
 
 Here the client on the left should see the missiles (the white cubes) at the same location as the server :
 
-!(https://i.ibb.co/ccQTV8T7/Capture-d-cran-2025-03-23-144120.png)
+![](https://i.ibb.co/ccQTV8T7/Capture-d-cran-2025-03-23-144120.png)

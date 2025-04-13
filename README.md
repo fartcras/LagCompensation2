@@ -1,5 +1,5 @@
 Use WASD to move your character and left click to shoot. Each Hero has a pool component of several missiles. When the player presses the left click button it shoots a missile on the server (max 1 missile each 0.125 sec).
-The server replicates the initial position, the yaw and the speed of the missile on all clients, there is also a RepNotity byte "Trigger" variable that increases each time the player shoots. That "Trigger" variable then triggers the move of the missiles on the client side according to the replicated variables.
+All missiles have a max range variable (not replicated though). The server replicates the initial position, the yaw and the speed of the missile on all clients, there is also a RepNotity byte "Trigger" variable that increases each time the player shoots. That "Trigger" variable then triggers the move of the missiles on the client side according to the replicated variables.
 However with lag it can happen that the missile is not exactly on the same position on the server and on the client, or the RepNotify can even not trigger.
 
 I would like that no matter what (lag) clients always see the missile at the correct server position.

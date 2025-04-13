@@ -1,8 +1,12 @@
-Use WASD to move your character and left click to shoot. Each Hero has a pool component of several missiles. When the player presses the left click button it spawns a missile on the server. The server replicates the initial position, the yaw and the speed of the missile on all clients. Then the clients move themselves the missile according to those replicated variables. However with lag it can happen that the missile is not exactly on the same position on the server and on the client.
+Use WASD to move your character and left click to shoot. Each Hero has a pool component of several missiles. When the player presses the left click button it shoots a missile on the server (max 1 missile each 0.125 sec).
+The server replicates the initial position, the yaw and the speed of the missile on all clients, there is also a RepNotity byte "Trigger" variable that increases each time the player shoots. That "Trigger" variable then triggers the move of the missiles on the client side according to the replicated variables.
+However with lag it can happen that the missile is not exactly on the same position on the server and on the client, or the RepNotify can even not trigger.
 
-I would like to synchronize the position of the client's missile with the position of the missile on the server once the missile has been spawned. So clients see the missile at the correct server position.
+I would like that no matter what (lag) clients always see the missile at the correct server position.
 
-Just to precise : if the client has 100 ms and there is a 100ms delay between the click (to launch a missile) and the actual spawning of a missile on the server, that is not a problem, I DO NOT want compensation for that.
+Things to know :
+- All players should have the missiles trajectory because in the actual game no matter the player posision, the player is able to teleport anywhere on the map and they would need to see the missiles if he teleports somewhere near some of them.
+- If the client has 100 ms and there is a 100ms delay between the click (to launch a missile) and the actual spawning of a missile on the server, that is not a problem, I DO NOT want lag compensation for that.
 
 Here the client on the left should see the missiles (the white cubes) at the same location as the server :
 

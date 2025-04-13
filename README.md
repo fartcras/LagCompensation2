@@ -4,7 +4,7 @@ Missiles are dormant, and ForceNetUpdate is used when it gets activated and desa
 However with lag it can happen that the missile is not exactly on the same position on the server and on the client, or the RepNotify can even not trigger.
 I would like that no matter what clients always see the missile at the correct server position.
 
-This is how the current implementation works, you can either improve it or create something totally new. I just need a system that allows the player to launch missiles at a frequency of 1 missile each 0.125 sec, and the missile trajectory must be smoothly replicated and optimized, each client has to always see the missile at the good position (the server position).
+This is how the current implementation works, you can either improve it or create something totally new. I just need a system that allows the player to launch missiles at a frequency of 1 missile each 0.125 sec in front of their character, and the missile trajectory must be smoothly replicated and optimized, each client has to always see the missile at the good position (the server position).
 
 Things to know :
 - All players should have the missiles trajectory because in the actual game no matter the player posision, the player is able to teleport anywhere on the map and they would need to see the missiles if he teleports somewhere near some of them.

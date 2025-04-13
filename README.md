@@ -10,6 +10,6 @@ Things to know :
 - All players should have the missiles trajectory because in the actual game no matter the player posision, the player is able to teleport anywhere on the map and they would need to see the missiles if he teleports somewhere near some of them.
 - If the client has 100 ms and there is a 100ms delay between the click (to launch a missile) and the actual launching of a missile on the server, that is not a problem, I DO NOT want lag compensation for that.
 
-Here the client on the left should see the missiles (the white cubes) at the same location as the server :
+Here you can see that the client (left) with high latency see the missiles (the white cubes) at the wrong location :
 
 ![test](https://i.ibb.co/ccQTV8T7/Capture-d-cran-2025-03-23-144120.png)
